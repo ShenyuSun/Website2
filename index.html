@@ -1,0 +1,50 @@
+<!--
+This is my second website. I learned from W3 School, and modified some on my own.
+http://www.w3schools.com/js/js_intro.asp
+-->
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Website Number 2</title>
+		<link rel="stylesheet" type="text/css" href="site.css" >
+	</head>
+
+	<body>
+		<section>
+			<div id="main">
+			<h2 id="changeTextColor">You can click the light bulb to turn on/off the light yo</h2>
+			<img id="lightBulbImage" class="displayed" onclick="changeImage()" src="pic_bulbon.gif" width="200" height="200">
+			</div>
+		</section>
+	<script language="javascript">
+		function changeImage()
+		{
+			var image = document.getElementById('lightBulbImage');
+			if (image.src.match("bulbon"))
+			{
+				image.src = "pic_bulboff.gif";
+				changeBackGroundColor('black');
+				changeTextColors('white');
+			}
+			else
+			{
+				image.src = "pic_bulbon.gif";
+				changeBackGroundColor('white');
+				changeTextColors('blue');
+			}
+		}
+
+		function changeBackGroundColor(color)
+		{
+			document.body.style.background = color; 
+		}
+
+		function changeTextColors(color)
+		{
+			var changeTextColor = document.getElementById("changeTextColor");
+			changeTextColor.style.color = color;
+		}
+	</script>	
+	</body>
+</html>
+
